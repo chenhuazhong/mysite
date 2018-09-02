@@ -2,13 +2,14 @@
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="css/main.css">
+    <script src="js/vue.js"></script>
     <script src="/js/jquery-1.12.4.min.js"></script>
 
 </head>
 
 <body style="background: #efebeb">
 <div id="app" >
-<div class="header" style="z-index: 888" >
+<div class="header" style="position: relative; z-index: 888;" >
     <img class="img1" src="images/img.jpg" alt="图片">
     <ul class="list">
         <li><a  href="index.html">首页</a></li>
@@ -27,6 +28,7 @@
 <div style="margin: auto;height: auto;position: relative;">
 
 <div style="width: 1000px ; height: 500px; margin-top: 8px;margin-left: 80px;position: relative;overflow: hidden;background:red;" >
+
     <div id="lunbotu"  style="position: absolute;width: 5000px">
         <div style="float: left;"><img style="width: 1000px;height: 500px;" src="images/571912102.jpg" alt=""></div>
         <div style="float: left;"><img style="width: 1000px;height: 500px;" src="images/571912102.jpg" alt=""></div>
@@ -34,14 +36,10 @@
         <div style="float: left;"><img style="width: 1000px;height: 500px;" src="images/571912102.jpg" alt=""></div>
         <div style="float: left;"><img style="width: 1000px;height: 500px;" src="images/571912102.jpg" alt=""></div>
         <div style="float: left;"><img style="width: 1000px;height: 500px;" src="images/571912102.jpg" alt=""></div>
-
-
-
-
-
-
     </div>
-
+    <div class="in_right" >
+    </div>
+    <div class="in_left" ></div>
 </div>
 <div style="width: 300px ; height: 500px; background: red; margin-left: 11px;position: absolute;left: 1091px;top: 0px;"></div>
 </div>
@@ -49,7 +47,12 @@
 
 <div style="width: 1000px;height: auto ;margin-left: 80px;">
 
-    <div style="width: 1000px;height: 230px;background: red;margin-top: 10px "></div>
+    <div style="width: 980px;height: 230px;background: white;margin-top: 10px;padding: 10px; ">
+        <h3>文章标题</h3>
+        <p>文章内容简介内容</p>
+        <p>文章内容简介内容</p>
+        <p>文章内容简介内容</p>
+    </div>
     <div style="width: 1000px;height: 230px;background: red;margin-top: 10px "></div>
     <div style="width: 1000px;height: 230px;background: red;margin-top: 10px "></div>
     <div style="width: 1000px;height: 230px;background: red;margin-top: 10px "></div>
@@ -79,12 +82,14 @@
      function lunbotu () {
 
 
-
-
         if (i>4)
         {
             i =1;
             lun.animate({'left':'0px'},0);
+        }
+        else if (i <= 0)
+        {
+            i = 1;
         }
         else
         {
@@ -96,9 +101,17 @@
         }
 
     }
-        var time = setInterval(lunbotu,5000);
+        var time = setInterval(lunbotu,7000);
+    $('.in_left').click(function () {
+       i -= 2;
+       var one_time = setTimeout(lunbotu);
+    });
+    $('.in_right').click(function () {
+//        clearInterval(time);
+        var one_time = setTimeout(lunbotu);
+//        var time = setInterval(lunbotu,5000);
 
-
+    })
 </script>
 </body>
 

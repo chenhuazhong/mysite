@@ -111,3 +111,35 @@ background: white;
     background: rebeccapurple;
     
 }
+
+
+
+.in_right{
+    position: absolute;
+    z-index: 888;
+    top:250px;
+    right:20px;
+
+    width: 35px;
+    height: 35px;
+    border-top: 7px solid #ffffff;
+    border-right: 7px solid #ffffff;
+    transform: rotate(45deg);
+}
+
+.in_left{
+    position: absolute;
+    z-index:888;
+    top:250px;
+    left: 20px;;
+    width: 35px;
+    height: 35px;
+    border-top: 7px solid #ffffff;
+    border-right: 7px solid #ffffff;
+    transform: rotate(-135deg);
+}
+
+
+
+
+
