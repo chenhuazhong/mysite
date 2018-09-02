@@ -1,0 +1,65 @@
+
+<html >
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/vue.js"></script>
+    <script src="js/music.js"></script>
+<div class="header">
+    <img class="img1" src="images/img.jpg" alt="图片">
+    <ul class="list">
+        <li><a target="window" href="index.html">首页</a></li>
+        <li><a target="window" href="music.html">音乐</a></li>
+        <li><a target="window" href="page.html">文章</a></li>
+        <li><a target="window" href="lrc/lrc.html">歌词</a></li>
+        <!-- <li><video  src="//music.163.com/style/swf/widget.swf?sid=495819618&type=2&auto=1&width=320&height=60" controls style="float: left;"></video></li> -->
+    </ul>
+
+</div>
+    <div class="music">
+         <div id="app">
+             <div>
+              <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=800 height=88 :src="url"></iframe>        <table style="width: 800px">
+             <table >
+                <tr>
+                        <th>序号</th>
+                        <th>歌曲</th>
+                        <th>歌手</th>
+                        <th>备注</th>
+                    </tr>
+                    <tr  v-for="(music,index) in music_list ">
+                        
+                        <td> {{ index }}</td>
+                        <td @click="check_music(index)" >{{ music.name }}</td>
+                        <td>{{ music.author }}</td>
+                       
+
+                    </tr>
+                </table>
+
+            </div>
+         </div>
+         <p style="color: red">好麻烦。。。。功能正在逐渐完善中</p>
+    </div>
+    <script>
+        var vm = new Vue({
+            el:"#app",
+            data:{
+                url :"//music.163.com/outchain/player?type=2&id=133998&auto=0&height=66",
+                music_list:[{"id": 133998, "name": "老街", "author": "李荣浩"}, {"id": 137703, "name": "晚安", "author": "马丁"}, {"id": 36990266, "name": 
+"Faded", "author": "Alan Walker"}, {"id": 102600, "name": "“王子呀…”", "author": "何崇志"}, {"id": 26347023, "name": 
+"预谋", "author": "许佳慧"}, {"id": 28949843, "name": "那就这样吧", "author": "Rocky"}, {"id": 126946, "name": "太早", 
+"author": "刘允乐"}, {"id": 557581284, "name": "纸短情长", "author": "花粥"}, {"id": 530223371, "name": "BBoom BBoom（Cover：MOMOLAND）", "author": "Leona甲子"}, {"id": 33937527, "name": "PneumaticTokyo", "author": "EnV"}, {"id": 21803760, "name": "50 Ways to Say Goodbye", "author": "Train"}, {"id": 447506014, "name": "Miss You Tonight（Cover 茶小姐和熊先生）", "author": "Biscuits"}, {"id": 
+482406536, "name": "温柔乡（Cover 陈雅森）", "author": "艾辰"}, {"id": 479219330, "name": "我一定会爱上你", "author": "谢春花"}, {"id": 408814900, "name": "借我", "author": "谢春花"}, {"id": 376417, "name": "一生有你", "author": "水木年华"}, {"id": 186686, "name": "用情", "author": "张信哲"}, {"id": 418257929, "name": "All About That Bass (Acoustic Cover)", "author": "CANNIE(晴子)"}, {"id": 4017240, "name": "Intro: The Dawn", "author": "Dreamtale"}, {"id": 509313150, "name": "Sakura Tears", 
+"author": "Nigel Silin"}, {"id": 447925059, "name": "阿刁", "author": "赵雷"}, {"id": 286745, "name": "万物生(梵)", "author": 
+"萨顶顶"}, {"id": 521848686, "name": "名侦探柯南主题曲<如果有你在>（<银翼的魔术师>钢琴改编版）Detective Conan Main Theme", "author": "Schuwenn Z."}, {"id": 28786838, "name": "回梦游仙", "author": "骆集益"}]
+            },
+            methods:{
+                check_music:function(index){
+                    
+                    vm.url ="//music.163.com/outchain/player?type=2&id=" + vm.music_list[index].id + "&auto=0&height=66"
+                    
+                   
+            }}
+        })
+    </script>
+</html>

@@ -1,0 +1,105 @@
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/main.css">
+    <script src="/js/jquery-1.12.4.min.js"></script>
+
+</head>
+
+<body style="background: #efebeb">
+<div id="app" >
+<div class="header" style="z-index: 888" >
+    <img class="img1" src="images/img.jpg" alt="图片">
+    <ul class="list">
+        <li><a  href="index.html">首页</a></li>
+        <li><a href="music.html">音乐</a></li>
+        <li><a href="page.html">文章</a></li>
+        <li><a href="lrc/lrc.html">歌词</a></li>
+        <!-- <li><video  src="//music.163.com/style/swf/widget.swf?sid=495819618&type=2&auto=1&width=320&height=60" controls style="float: left;"></video></li> -->
+    </ul>
+
+</div>
+<!--<div style="background-image:url('http://img.zcool.cn/community/0117e2571b8b246ac72538120dd8a4.jpg@1280w_1l_2o_100sh.jpg')-->
+<!--;background-position:center; background-repeat:repeat-y ;width: 100%;height: 1000px;">-->
+    <!---->
+<!--</div>-->
+<div>
+<div style="margin: auto;height: auto;position: relative;">
+
+<div style="width: 1000px ; height: 500px; margin-top: 8px;margin-left: 80px;position: relative;overflow: hidden;background:red;" >
+    <div id="lunbotu"  style="position: absolute;width: 5000px">
+        <div style="float: left;"><img style="width: 1000px;height: 500px;" src="images/571912102.jpg" alt=""></div>
+        <div style="float: left;"><img style="width: 1000px;height: 500px;" src="images/571912102.jpg" alt=""></div>
+        <div style="float: left;"><img style="width: 1000px;height: 500px;" src="images/571912102.jpg" alt=""></div>
+        <div style="float: left;"><img style="width: 1000px;height: 500px;" src="images/571912102.jpg" alt=""></div>
+        <div style="float: left;"><img style="width: 1000px;height: 500px;" src="images/571912102.jpg" alt=""></div>
+        <div style="float: left;"><img style="width: 1000px;height: 500px;" src="images/571912102.jpg" alt=""></div>
+
+
+
+
+
+
+    </div>
+
+</div>
+<div style="width: 300px ; height: 500px; background: red; margin-left: 11px;position: absolute;left: 1091px;top: 0px;"></div>
+</div>
+</div>
+
+<div style="width: 1000px;height: auto ;margin-left: 80px;">
+
+    <div style="width: 1000px;height: 230px;background: red;margin-top: 10px "></div>
+    <div style="width: 1000px;height: 230px;background: red;margin-top: 10px "></div>
+    <div style="width: 1000px;height: 230px;background: red;margin-top: 10px "></div>
+    <div style="width: 1000px;height: 230px;background: red;margin-top: 10px "></div>
+    <div style="width: 1000px;height: 230px;background: red;margin-top: 10px "></div>
+    <div style="width: 1000px;height: 230px;background: red;margin-top: 10px "></div>
+
+</div>
+
+
+
+<div style="width: 100%;height: 100px;background: #060606;margin-top:8px ;position: relative;">
+    <div style="margin-left: 50px;">
+    <div style="color: white">个人网站</div>
+    <div style="color: white">QQ : 571912102</div>
+    <div style="color: white">csdn : <a target="_blank"  style="text-decoration: none" href="https://me.csdn.net/p571912102">csdn个人主页</a></div>
+
+    <div style="color: white">github : <a target="_blank" style="text-decoration: none" href="https://github.com/chenhuazhong">github主页</a></div>
+    </div>
+    <div><img @click="" style="position: absolute;left: 220px;top:0px;width: 100px;height: 100px;" src="/images/571912102.jpg" alt="qq二维码"></div>
+
+</div>
+</div>
+<script>
+    i = 1;
+    lun = $('#lunbotu');
+
+     function lunbotu () {
+
+
+
+
+        if (i>4)
+        {
+            i =1;
+            lun.animate({'left':'0px'},0);
+        }
+        else
+        {
+            len = (-i) * 1000 + 'px';
+            lun.animate({'left':len},1000);
+//          lun.animate()
+//          alert('ok!');
+            i += 1;
+        }
+
+    }
+        var time = setInterval(lunbotu,5000);
+
+
+</script>
+</body>
+
+</html>
