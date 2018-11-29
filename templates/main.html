@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>买买买</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../static/images/16470418172971.jpg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="../static/css/main.css" />
+    <script src="main.js"></script>
+    <script src="../static/js/jquery-1.12.4.min.js"></script>
+    <script src="../static/js/vue.js"></script>
+</head>
+<body class="main">
+<div id="app" class="header">
+    <img class="img1" src="../static/images/img.jpg" alt="图片">
+    <ul class="list">
+        <li><a target="window" href="index.html">首页</a></li>
+        <li><a target="window" href="music.html">音乐</a></li>
+        <li><a target="window" href="page.html">文章</a></li>
+        <li><a target="window" href="lrc.html">歌词</a></li>
+        <!-- <li><video  src="//music.163.com/style/swf/widget.swf?sid=495819618&type=2&auto=1&width=320&height=60" controls style="float: left;"></video></li> -->
+    </ul>
+    
+</div>
+<!--<div class="window">-->
+<!--<iframe src="index.html" frameborder="0" name="window" style="width: 100%;height: 100%;"></iframe>-->
+<!--</div>-->
+<div class="end"></div>
+<script>
+    var vm = new Vue({
+        el:"#app",
+        data:{
+                time :$("#time").html()
+        },
+        methods:{
+            show:function(){alert(this.time)}
+    }})
+  
+
+</script>
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,170 @@
+<html >
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/static/css/main.css">
+    <script src="/static/js/vue.js"></script>
+    <script src="/static/js/axios.min.js"></script>
+    <script src="/static/js/jquery-1.12.4.min.js"></script>
+
+</head>
+
+<body style="background: #efebeb">
+<div  id="app">
+<div class="header" style="position: relative; z-index: 888;" >
+    <a href="/">
+        <img class="img1" src="/static/images/img.jpg" alt="首页">
+</a>
+
+
+</div>
+<!--<div style="background-image:url('http://img.zcool.cn/community/0117e2571b8b246ac72538120dd8a4.jpg@1280w_1l_2o_100sh.jpg')-->
+<!--;background-position:center; background-repeat:repeat-y ;width: 100%;height: 1000px;">-->
+    <!---->
+<!--</div>-->
+<div>
+<div style="margin: auto;height: auto;position: relative;">
+
+
+
+</div>
+</div>
+
+
+
+
+<div style="width: 100%;height: 80px;background: #060606;margin-top:8px;padding-top:4px;position: fixed;bottom: 0px; left: 0px;">
+    <div style="margin-left: 50px;">
+    <div style="color: white">QQ : 571912102</div>
+    <div style="color: white">csdn : <a target="_blank"  style="text-decoration: none" href="https://me.csdn.net/p571912102">csdn个人主页</a></div>
+
+    <div style="color: white">github : <a target="_blank" style="text-decoration: none" href="https://github.com/chenhuazhong">github主页</a></div>
+    </div>
+    <div><img @click="" style="position: absolute;left: 220px;top:0px;width: 100px;height: 100px;" src="/static/images/571912102.jpg" alt="qq二维码"></div>
+
+</div>
+</div>
+<script>
+
+    var mv = new Vue({
+        el: '#app',
+        delimiters: ['[[', ']]'], // 防止django的模板引擎和vue冲突
+        data:{
+            mobile: null,
+            password: null,
+            user_id: {{ user_id }},
+            username:null,
+            userimg:null
+
+        },
+
+        methods: {
+            login: function () {
+                axios.post('{{ HOST }}user/login/', {
+                    mobile: this.mobile,
+                    password: this.password
+                }, {
+                    responseType: 'json'
+                })
+                    .then(function (response) {
+                        if (response.data.code == 200)
+                        {
+                            $('#is_login').show();
+                            $('#is_logout').hide();
+                            mv.user_id = response.data.data.user_id;
+                            mv.username = response.data.data.user;
+                            mv.userimg = response.data.data.img;
+
+                        }
+                        else
+                        {
+                            $('#is_logout').show();
+                            $('#is_login').hide();
+                            alert(response.data.message)
+                        }
+                    })
+                    .catch(function (error) {
+                            $('#is_logout').show();
+                            $('#is_login').hide();
+                            alert('出错啦');
+                        console.log(error)
+                    })
+            },
+            logout:function(){
+                axios.post('{{ HOST }}user/logout/', {
+
+
+                }, {
+                    responseType: 'json',
+                    withCredentials: true
+                })
+                    .then(function (response) {
+                        console.log(response);
+                        if (response.data.code == 200)
+                        {
+{#                            $('#is_logout').show();#}
+{#                            $('#is_login').hide();#}
+                            location.href='{{ HOST }}'
+
+                        }
+                        else
+                        {
+                            $('#is_login').show();
+                            $('#is_logout').hide();
+                            alert(response.data.message)
+                        }
+                    })
+                    .catch(function (error) {
+                        $('#is_login').show();
+                        $('#is_logout').hide();
+                        alert('出错啦')
+                        console.log(error)
+                    })
+            },
+            page_detail:function (pk) {
+                location.href='{{ HOST }}page/' + pk
+
+            }
+        }
+    })
+</script>
+<script>
+        i = 1;
+    lun = $('#lunbotu');
+
+     function lunbotu () {
+
+
+        if (i>4)
+        {
+            i =1;
+            lun.animate({'left':'0px'},0);
+        }
+        else if (i <= 0)
+        {
+            i = 1;
+        }
+        else
+        {
+            len = (-i) * 1000 + 'px';
+            lun.animate({'left':len},1000);
+//          lun.animate()
+//          alert('ok!');
+            i += 1;
+        }
+
+    }
+        var time = setInterval(lunbotu,7000);
+    $('.in_left').click(function () {
+       i -= 2;
+       var one_time = setTimeout(lunbotu);
+    });
+    $('.in_right').click(function () {
+//        clearInterval(time);
+        var one_time = setTimeout(lunbotu);
+//        var time = setInterval(lunbotu,5000);
+
+    });
+</script>
+</body>
+
+</html>

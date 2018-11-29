@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html >
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta charset="GB2313"/>
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="renderer" content="webkit">
+	<link rel="stylesheet" type="text/css" href="/static/lrc/lrc.css">
+	<style type="text/css">
+	body{font-family: 'Microsoft Yahei'; font-size: 16px; background: white; margin: 0; padding: 0;}
+	.title{color:white; margin-left: 100px;}
+	.title span {font-size: 20px;}
+	.body-wrapper{width:1000px;height:800px; position: absolute; left: 0; top: 80px;}
+{#    background: url(/static/lrc/bg.jpg) no-repeat;#}
+	audio{width: 1000px;}
+	#lrc-wrapper {position: absolute; left: 250px; top: 200px;  }
+	</style>
+        <meta charset="utf-8" />
+    <link rel="stylesheet" href="/static/css/main.css">
+    <script src="/static/js/vue.js"></script>
+    <script src="/static/js/music.js"></script>
+</head>
+<body>
+
+<div class="header">
+    <a href="/user/center/"><img class="img1" src="/static/images/img.jpg" alt="图片"></a>
+    <ul class="list">
+        <li><a href="/">首页</a></li>
+        <li><a  href="/music/">音乐</a></li>
+        <li><a href="/page/">文章</a></li>
+        <li><a  href="lrc/">歌词</a></li>
+        <!-- <li><video  src="//music.163.com/style/swf/widget.swf?sid=495819618&type=2&auto=1&width=320&height=60" controls style="float: left;"></video></li> -->
+    </ul>
+
+</div>
+
+	<div class="body-wrapper">
+		<h1 class="title">歌词演示</h1>
+		<audio id="mp" src="/static/lrc/test.mp3" controls autoplay ></audio>
+		<div id="lrc-wrapper" class="lrc-wrapper"></div>
+	</div>
+
+	<script type="text/javascript" src="/static/lrc/lrc.js"></script>
+
+	<script type="text/javascript">
+
+	// 实例化一个LRC歌词插件
+	var mylrc = new Lrc(
+	{
+		wrapperId: 'lrc-wrapper', // 目标容器ID
+		lrcUrl: '/static/lrc/test.lrc', // 歌词文件地址
+		row: 7, // 歌词行数
+		lineHeight: 40, // 每行歌词的高度，修改高度需要同步修改【.lrc-wrapper ul li】的样式
+		delay: 0, // 延迟秒数，如果歌词文件不同步可以启用这个参数
+		// 获取当前播放时间，针对不同播放器需要自己实现本方法，对于EPG可以是：Epg.Mp.getCurrentPlayTime()
+		getCurrentPlayTime: function(){ return mp.currentTime || 0; }
+		//getCurrentPlayTime: function(){ return Epg.Mp.getCurrentPlayTime(); }
+	});
+	</script>
+</body>
+</html>
