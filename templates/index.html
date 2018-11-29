@@ -49,7 +49,7 @@
             <lable style="margin: 10px 5px 0px 15px ; width: 70px;height: 25px;float: left;text-align: right">密码：</lable>
             <input style="width: 200px;float: left;height: 25px;margin-top: 10px" name="pd" v-model="password">
             <input style="width: 100px;height: 30px;margin:20px 0px 0px  49px;" type="button" value="登陆" @click='login'>
-            <input style="width: 100px;height: 30px;margin:20px 0px 0px  " type="button" value="注册">
+            <input style="width: 100px;height: 30px;margin:20px 0px 0px  " type="button" value="注册" @click='registe'>
         </form>
         <!--<form autocomplete="off" class="ivu-form ivu-form-label-right"><div class="ivu-form-item">&lt;!&ndash;&ndash;&gt; <div class="ivu-form-item-content"><div class="input-wraper ivu-input-wrapper ivu-input-wrapper-default ivu-input-type">&lt;!&ndash;&ndash;&gt; &lt;!&ndash;&ndash;&gt; <i class="ivu-icon ivu-icon-ios-loading ivu-load-loop ivu-input-icon ivu-input-icon-validate"></i> <input autocomplete="off" spellcheck="false" type="text" placeholder="手机号" class="ivu-input ivu-input-default"> &lt;!&ndash;&ndash;&gt;</div> &lt;!&ndash;&ndash;&gt;</div></div><div class="ivu-form-item ivu-form-item-required">&lt;!&ndash;&ndash;&gt; <div class="ivu-form-item-content"><div class="input-wraper ivu-input-wrapper ivu-input-wrapper-default ivu-input-type">&lt;!&ndash;&ndash;&gt; &lt;!&ndash;&ndash;&gt; <i class="ivu-icon ivu-icon-ios-loading ivu-load-loop ivu-input-icon ivu-input-icon-validate"></i> <input autocomplete="off" spellcheck="false" type="password" placeholder="密码" class="ivu-input ivu-input-default"> &lt;!&ndash;&ndash;&gt;</div> &lt;!&ndash;&ndash;&gt;</div></div><div class="clearfix fs12 mb16"><label class="ivu-checkbox-wrapper ivu-checkbox-default"><span class="ivu-checkbox"><span class="ivu-checkbox-inner"></span> <input type="checkbox" class="ivu-checkbox-input"></span> 记住我</label><span class="pull-right"><a href="javascript:;">忘记密码？</a></span></div><div class="ivu-form-item">&lt;!&ndash;&ndash;&gt; <div class="ivu-form-item-content"><div class="btn btn-primary btn-submit">立即登录</div> &lt;!&ndash;&ndash;&gt;</div></div><div class="text-center"><p class="fs12">还没有账号， <a href="javascript:;">立即注册</a></p></div><div class="oauth mt32"><div>快捷登录</div><ul class="mt32"><li><div><i class="iconfont"></i>微博</div></li><li><div><i class="iconfont"></i>微信</div></li><li><div><i class="iconfont"></i>QQ</div></li></ul></div></form>-->
     </div>
@@ -64,8 +64,9 @@
             <input  v-model="mobile"  style="width: 200px;float: left;height: 25px;margin-top: 10px" name="mb">
             <lable style="margin: 10px 5px 0px 15px ; width: 70px;height: 25px;float: left;text-align: right">密码：</lable>
             <input style="width: 200px;float: left;height: 25px;margin-top: 10px" name="pd" v-model="password">
-            <input style="width: 100px;height: 30px;margin:20px 0px 0px  49px;" type="button" value="登陆" @click='login'>
-            <input style="width: 100px;height: 30px;margin:20px 0px 0px  " type="button" value="注册">
+            <input style="width: 100px;height: 30px;margin:20px 0px 0px 49px;" type="button" value="登陆" @click='login'>
+            <input style="width: 100px;height: 30px;margin:20px 0px 0px 0px;"  type="button" value="注册" @click='registe'>
+
         </form>
         <!--<form autocomplete="off" class="ivu-form ivu-form-label-right"><div class="ivu-form-item">&lt;!&ndash;&ndash;&gt; <div class="ivu-form-item-content"><div class="input-wraper ivu-input-wrapper ivu-input-wrapper-default ivu-input-type">&lt;!&ndash;&ndash;&gt; &lt;!&ndash;&ndash;&gt; <i class="ivu-icon ivu-icon-ios-loading ivu-load-loop ivu-input-icon ivu-input-icon-validate"></i> <input autocomplete="off" spellcheck="false" type="text" placeholder="手机号" class="ivu-input ivu-input-default"> &lt;!&ndash;&ndash;&gt;</div> &lt;!&ndash;&ndash;&gt;</div></div><div class="ivu-form-item ivu-form-item-required">&lt;!&ndash;&ndash;&gt; <div class="ivu-form-item-content"><div class="input-wraper ivu-input-wrapper ivu-input-wrapper-default ivu-input-type">&lt;!&ndash;&ndash;&gt; &lt;!&ndash;&ndash;&gt; <i class="ivu-icon ivu-icon-ios-loading ivu-load-loop ivu-input-icon ivu-input-icon-validate"></i> <input autocomplete="off" spellcheck="false" type="password" placeholder="密码" class="ivu-input ivu-input-default"> &lt;!&ndash;&ndash;&gt;</div> &lt;!&ndash;&ndash;&gt;</div></div><div class="clearfix fs12 mb16"><label class="ivu-checkbox-wrapper ivu-checkbox-default"><span class="ivu-checkbox"><span class="ivu-checkbox-inner"></span> <input type="checkbox" class="ivu-checkbox-input"></span> 记住我</label><span class="pull-right"><a href="javascript:;">忘记密码？</a></span></div><div class="ivu-form-item">&lt;!&ndash;&ndash;&gt; <div class="ivu-form-item-content"><div class="btn btn-primary btn-submit">立即登录</div> &lt;!&ndash;&ndash;&gt;</div></div><div class="text-center"><p class="fs12">还没有账号， <a href="javascript:;">立即注册</a></p></div><div class="oauth mt32"><div>快捷登录</div><ul class="mt32"><li><div><i class="iconfont"></i>微博</div></li><li><div><i class="iconfont"></i>微信</div></li><li><div><i class="iconfont"></i>QQ</div></li></ul></div></form>-->
     </div>
@@ -131,7 +132,8 @@
             password: null,
             user_id: {{ user_id }},
             username:null,
-            userimg:null
+            userimg:null,
+
 
         },
 
@@ -201,6 +203,20 @@
             page_detail:function (pk) {
                 location.href='{{ HOST }}page/' + pk
 
+            },
+            registe:function () {
+                axios.post('/user/registe/',{
+                    'mobile':mv.mobile,
+                    'password':mv.password
+                }).then(function (response) {
+                    console.log(response.data)
+                    mv.username=response.data.data.username
+                    mv.userimg=response.data.data.userimg
+                    $('#is_login').show();
+                    $('#is_logout').hide();
+                }).catch(function (error) {
+                    alert('error')
+                })
             }
         }
     })

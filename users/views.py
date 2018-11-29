@@ -27,8 +27,8 @@ def userLogin(request):
         return JsonResponse({'code': 200, 'data':{'user_id': user.id, 'user': user.username, 'img': user.ater_img.name}})
 
 def registe(request):
-    mobile = request.body.get('mobile')
-    password = request.body.get('password')
+    mobile = json.loads(request.body.decode('utf-8')).get('mobile')
+    password = json.loads(request.body.decode('utf-8')).get('password')
     if mobile is None or password is None:
         return JsonResponse({'code': 400, 'message': '手机号或者密码不能为空'})
     if User.objects.filter(mobile=mobile).count() > 0:
@@ -38,7 +38,8 @@ def registe(request):
     user.mobile = mobile
     user.set_password(password)
     user.save()
-    return JsonResponse({'code': 200, 'data': {'user_id': user.id, 'user': user.username, 'img': user.ater_img.name}})
+    login(request, user)
+    return JsonResponse({'code': 200, 'data': {'user_id': user.id, 'username': user.username, 'userimg': user.ater_img.name}})
 
 
 #
