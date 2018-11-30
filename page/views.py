@@ -14,6 +14,7 @@ def page(request):
     for obj in page_obj_list:
         page_obj_dict = OrderedDict()
         page_obj_dict['id'] = obj.id
+        page_obj_dict['p_commit_number'] = obj.p_comment
         page_obj_dict['update_time'] = obj.update_time.strftime('%Y-%m-%d')
         page_obj_dict['p_content'] = '<p>' + re.sub('<.*?>', '', obj.p_content)[:400] + "</p>"
         print(page_obj_dict['p_content'])

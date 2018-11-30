@@ -21,6 +21,8 @@ def index(request):
         page_dict = OrderedDict()
         page_dict['id'] = i.id
         page_dict['p_title'] = i.p_title
+        page_dict['p_commit_number'] = i.p_comment
+        print('评论数', i.p_comment)
         page_dict['p_content'] = '<p>' + re.sub('<.*?>', '', i.p_content)[:200] + "</p>"
         print('lailailai')
         print( page_dict['p_content'] )
