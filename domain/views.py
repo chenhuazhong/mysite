@@ -7,6 +7,8 @@ from django.shortcuts import render
 
 from domain.models import Pager, Comment
 from mysite import settings
+from users.utils import login_wrapper
+
 
 def index(request):
     user = request.user
@@ -71,6 +73,8 @@ def detail(request, pk):
     :return:
     """
     user = request.user
+    if user.is_anonymous:
+        user=None
     try:
         page = Pager.objects.get(id=pk)
     except Pager.DoesNotExist as e:
@@ -112,12 +116,20 @@ def detail(request, pk):
         'comment': comm_list
     })
 
+
+
+@login_wrapper
 def comment(request, pk):
     print(request.user)
     page = Pager.objects.get(id=pk)
+
     comment = Comment()
     comment.page_id=page.id
     comment.p_comment=json.loads(request.body.decode('utf-8')).get('comment')
     comment.user = request.user
     comment.save()
-    return JsonResponse({'code':200})
+
+    page.p_comment += 1
+    page.save()
+
+    return JsonResponse({'code':200, 'message': '评论已提交'})

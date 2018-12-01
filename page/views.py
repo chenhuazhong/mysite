@@ -9,6 +9,9 @@ from domain.models import Pager
 
 def page(request):
     user = request.user
+    if user.is_anonymous:
+        user = None
+
     page_obj_list = Pager.objects.all()[:20]
     pagelist = []
     for obj in page_obj_list:
@@ -22,6 +25,8 @@ def page(request):
         pagelist.append(page_obj_dict)
 
     return render(request, 'pagelist.html', context={
-        'page': pagelist
+        'page': pagelist,
+
+        'user':user
     })
     pass

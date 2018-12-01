@@ -17,6 +17,14 @@
         <li><a href="/music/">音乐</a></li>
         <li><a href="/page/">文章</a></li>
         <li><a href="/music/lrc/">歌词</a></li>
+                       {% if user is None%}
+              <div style="float: right; margin-top: 20px" v-if="is_login"><spaw @click="topw=true">登录</spaw>&nbsp;&nbsp;|&nbsp;&nbsp;<spaw @click="topw=true">注册</spaw></div>
+
+              <div style="  float: right; margin-top: 20px" v-else> <spaw> [[ username ]]</spaw>&nbsp;&nbsp;|&nbsp;&nbsp;<spaw @click="logout" >退出</spaw></div>
+
+            {% else %}
+              <div style="float: right; margin-top: 20px"><spaw >{{ user.username }}</spaw>&nbsp;&nbsp;|&nbsp;&nbsp;<spaw @click="logout">退出</spaw></div>
+        {% endif %}
         <!-- <li><video  src="//music.163.com/style/swf/widget.swf?sid=495819618&type=2&auto=1&width=320&height=60" controls style="float: left;"></video></li> -->
     </ul>
 
@@ -29,8 +37,10 @@
 <div style="margin: auto;height: auto;position: relative;">
 
 
-<div style="width: 300px ; height: 500px; background: white; margin-left: 11px;position: absolute;left: 1091px;top: 0px;">
-    {% if user is None %}
+{#登录弹窗#}
+<div v-show="topw" style="display:none;position: relative;z-index: 118 ">
+<div style="position: fixed ;opacity:0.4;top: 0px;left: 0px;;background: #bbbaba; width: 100%;height: 100%;" @click="topw=false"></div>
+<div style=" z-index:999 ; width: 340px ; height: 440px; background: white; margin: -300px 0px 0px -170px;position: fixed;left: 50%;top: 50%;"  >
     <div style="padding-top: 10px ;" id="is_logout">
         <form action="" >
             <lable style="margin: 10px 5px 0px 15px ; width: 70px;height: 25px;float: left;text-align: right" name="l">用户名：</lable>
@@ -38,32 +48,15 @@
             <lable style="margin: 10px 5px 0px 15px ; width: 70px;height: 25px;float: left;text-align: right">密码：</lable>
             <input style="width: 200px;float: left;height: 25px;margin-top: 10px" name="pd" v-model="password">
             <input style="width: 100px;height: 30px;margin:20px 0px 0px  49px;" type="button" value="登陆" @click='login'>
-            <input style="width: 100px;height: 30px;margin:20px 0px 0px  " type="button" value="注册">
+            <input style="width: 100px;height: 30px;margin:20px 0px 0px  " type="button" value="注册" @click='registe'>
         </form>
         <!--<form autocomplete="off" class="ivu-form ivu-form-label-right"><div class="ivu-form-item">&lt;!&ndash;&ndash;&gt; <div class="ivu-form-item-content"><div class="input-wraper ivu-input-wrapper ivu-input-wrapper-default ivu-input-type">&lt;!&ndash;&ndash;&gt; &lt;!&ndash;&ndash;&gt; <i class="ivu-icon ivu-icon-ios-loading ivu-load-loop ivu-input-icon ivu-input-icon-validate"></i> <input autocomplete="off" spellcheck="false" type="text" placeholder="手机号" class="ivu-input ivu-input-default"> &lt;!&ndash;&ndash;&gt;</div> &lt;!&ndash;&ndash;&gt;</div></div><div class="ivu-form-item ivu-form-item-required">&lt;!&ndash;&ndash;&gt; <div class="ivu-form-item-content"><div class="input-wraper ivu-input-wrapper ivu-input-wrapper-default ivu-input-type">&lt;!&ndash;&ndash;&gt; &lt;!&ndash;&ndash;&gt; <i class="ivu-icon ivu-icon-ios-loading ivu-load-loop ivu-input-icon ivu-input-icon-validate"></i> <input autocomplete="off" spellcheck="false" type="password" placeholder="密码" class="ivu-input ivu-input-default"> &lt;!&ndash;&ndash;&gt;</div> &lt;!&ndash;&ndash;&gt;</div></div><div class="clearfix fs12 mb16"><label class="ivu-checkbox-wrapper ivu-checkbox-default"><span class="ivu-checkbox"><span class="ivu-checkbox-inner"></span> <input type="checkbox" class="ivu-checkbox-input"></span> 记住我</label><span class="pull-right"><a href="javascript:;">忘记密码？</a></span></div><div class="ivu-form-item">&lt;!&ndash;&ndash;&gt; <div class="ivu-form-item-content"><div class="btn btn-primary btn-submit">立即登录</div> &lt;!&ndash;&ndash;&gt;</div></div><div class="text-center"><p class="fs12">还没有账号， <a href="javascript:;">立即注册</a></p></div><div class="oauth mt32"><div>快捷登录</div><ul class="mt32"><li><div><i class="iconfont"></i>微博</div></li><li><div><i class="iconfont"></i>微信</div></li><li><div><i class="iconfont"></i>QQ</div></li></ul></div></form>-->
-    </div>
-        <div id="is_login" style="display: none">
-        <h3>[[ username ]]</h3>
-        <input type="button" value ="退出登陆" @click="logout">
-        </div>
-    {% else %}
-        <div style="padding-top: 10px ;display: none" id="is_logout" >
-        <form action="" >
-            <lable style="margin: 10px 5px 0px 15px ; width: 70px;height: 25px;float: left;text-align: right" name="l">用户名：</lable>
-            <input  v-model="mobile"  style="width: 200px;float: left;height: 25px;margin-top: 10px" name="mb">
-            <lable style="margin: 10px 5px 0px 15px ; width: 70px;height: 25px;float: left;text-align: right">密码：</lable>
-            <input style="width: 200px;float: left;height: 25px;margin-top: 10px" name="pd" v-model="password">
-            <input style="width: 100px;height: 30px;margin:20px 0px 0px  49px;" type="button" value="登陆" @click='login'>
-            <input style="width: 100px;height: 30px;margin:20px 0px 0px  " type="button" value="注册">
-        </form>
-        <!--<form autocomplete="off" class="ivu-form ivu-form-label-right"><div class="ivu-form-item">&lt;!&ndash;&ndash;&gt; <div class="ivu-form-item-content"><div class="input-wraper ivu-input-wrapper ivu-input-wrapper-default ivu-input-type">&lt;!&ndash;&ndash;&gt; &lt;!&ndash;&ndash;&gt; <i class="ivu-icon ivu-icon-ios-loading ivu-load-loop ivu-input-icon ivu-input-icon-validate"></i> <input autocomplete="off" spellcheck="false" type="text" placeholder="手机号" class="ivu-input ivu-input-default"> &lt;!&ndash;&ndash;&gt;</div> &lt;!&ndash;&ndash;&gt;</div></div><div class="ivu-form-item ivu-form-item-required">&lt;!&ndash;&ndash;&gt; <div class="ivu-form-item-content"><div class="input-wraper ivu-input-wrapper ivu-input-wrapper-default ivu-input-type">&lt;!&ndash;&ndash;&gt; &lt;!&ndash;&ndash;&gt; <i class="ivu-icon ivu-icon-ios-loading ivu-load-loop ivu-input-icon ivu-input-icon-validate"></i> <input autocomplete="off" spellcheck="false" type="password" placeholder="密码" class="ivu-input ivu-input-default"> &lt;!&ndash;&ndash;&gt;</div> &lt;!&ndash;&ndash;&gt;</div></div><div class="clearfix fs12 mb16"><label class="ivu-checkbox-wrapper ivu-checkbox-default"><span class="ivu-checkbox"><span class="ivu-checkbox-inner"></span> <input type="checkbox" class="ivu-checkbox-input"></span> 记住我</label><span class="pull-right"><a href="javascript:;">忘记密码？</a></span></div><div class="ivu-form-item">&lt;!&ndash;&ndash;&gt; <div class="ivu-form-item-content"><div class="btn btn-primary btn-submit">立即登录</div> &lt;!&ndash;&ndash;&gt;</div></div><div class="text-center"><p class="fs12">还没有账号， <a href="javascript:;">立即注册</a></p></div><div class="oauth mt32"><div>快捷登录</div><ul class="mt32"><li><div><i class="iconfont"></i>微博</div></li><li><div><i class="iconfont"></i>微信</div></li><li><div><i class="iconfont"></i>QQ</div></li></ul></div></form>-->
-    </div>
-        <div id="is_login">
-        <h3 >{{ user.username }}</h3>
-        <input type="button" value ="退出登陆" @click="logout">
-        </div>
-    {% endif %}
+
 </div>
+{# 登录弹窗 #}
+</div>
+</div>
+
 </div>
 </div>
 
@@ -113,21 +106,23 @@
 </div>
 <script>
 
-    var mv = new Vue({
+    var vm = new Vue({
         el: '#app',
         delimiters: ['[[', ']]'], // 防止django的模板引擎和vue冲突
         data:{
             mobile: null,
             password: null,
-            user_id: {{ user_id }},
+
             username:null,
-            userimg:null
+            userimg:null,
+            is_login:true,
+            topw:false
 
         },
 
         methods: {
             login: function () {
-                axios.post('{{ HOST }}user/login/', {
+                axios.post('/user/login/', {
                     mobile: this.mobile,
                     password: this.password
                 }, {
@@ -138,9 +133,11 @@
                         {
                             $('#is_login').show();
                             $('#is_logout').hide();
-                            mv.user_id = response.data.data.user_id;
-                            mv.username = response.data.data.user;
-                            mv.userimg = response.data.data.img;
+                            vm.user_id = response.data.data.user_id;
+                            vm.username = response.data.data.user;
+                            vm.userimg = response.data.data.img;
+                            vm.topw=false;
+                            vm.is_login=false;
 
                         }
                         else
@@ -158,7 +155,7 @@
                     })
             },
             logout:function(){
-                axios.post('{{ HOST }}user/logout/', {
+                axios.post('/user/logout/', {
 
 
                 }, {
@@ -188,10 +185,27 @@
                         console.log(error)
                     })
             },
+            registe:function () {
+                axios.post('/user/registe/',{
+                    'mobile':vm.mobile,
+                    'password':vm.password
+                }).then(function (response) {
+                    vm.topw=false
+                    vm.is_login=false
+                    console.log(response.data)
+                    vm.username=response.data.data.username
+                    vm.userimg=response.data.data.userimg
+                    $('#is_login').show();
+                    $('#is_logout').hide();
+                }).catch(function (error) {
+                    alert('error')
+                })
+            },
             page_detail:function (pk) {
-                location.href='{{ HOST }}page/' + pk
+                location.href='/page/' + pk
 
             }
+
         }
     })
 </script>
