@@ -12,6 +12,7 @@ urlpatterns = [
     path('registe/', views.registe),
     path('logout/', views.userLogout),
     path('center/', views.userinfo),
+    path('test/', views.test1),
 
     # path('login/', login),
 ]

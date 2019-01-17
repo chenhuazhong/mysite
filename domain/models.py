@@ -31,6 +31,11 @@ class Pager(BaseModel):
         (0, '不置顶'),
         (1, '置顶'),
     )
+    CHOICES_P_TYPE = (
+        (0, '无平台'),
+        (1, 'csdn'),
+        (2, '简书')
+    )
     p_user = models.ForeignKey('users.User', on_delete=models.CASCADE, verbose_name='文章发布者', default=User.objects.get(username='root').id)
     p_like = models.IntegerField('点赞数', default=0)
     p_comment = models.IntegerField('评论数', default=0)
@@ -39,13 +44,18 @@ class Pager(BaseModel):
     p_img = models.ImageField('首页图片', upload_to=check_img_url, blank=True, null=True, max_length=100)
     p_isdelete = models.BooleanField('逻辑删除', default=False)
     p_top = models.SmallIntegerField('首页轮播图（置顶）', choices=CHOICES_TOP, default=0)
+    p_type = models.SmallIntegerField('文章类型（csdn，简书，等）',choices=CHOICES_P_TYPE, default=0)
+    p_other_id = models.IntegerField('博客id',blank=True, null=True)
+    p_tag = models.CharField('原创 or other', max_length=10, blank=True, null=True)
+    p_title_md5 = models.CharField('文章标题的uuid', max_length=32, blank=True, null=True)
+    p_content_md5 = models.CharField('文章', max_length=32, blank=True, null=True)
 
     class Meta:
         db_table='tb_pager'
         verbose_name='文章'
         verbose_name_plural=verbose_name
 
-
+'''13 392536'''
 class Comment(BaseModel):
     user = models.ForeignKey('users.User', on_delete=models.CASCADE)
     page = models.ForeignKey('Pager', on_delete=models.CASCADE)

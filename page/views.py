@@ -30,3 +30,4 @@ def page(request):
         'user':user
     })
     pass
+

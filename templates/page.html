@@ -51,7 +51,10 @@
             <div style="padding: 25px; background: white; border-bottom: 1px solid #d4d1d1">
                 <img src="{{ HOST }}static/images/img.jpg" alt="头像" style="width: 30px;height: 30px;border-radius: 15px;" >
                 <div style="display: inline ; font-size: 20px;margin-left:10px "><a href="javascript:;" style="text-decoration: none">{{ foo.username }}</a> : <span>{{ foo.p_comment }}</span></div>
-                <div style="display: inline ; font-size: 14px;margin:35px 40px 0px 0px;float: right; ">{{ foo.create_time }}</div>
+             <a href="javascript:;" style=" font-size: 14px;margin:35px 140px 0px 100px;float: right ">回复</a>
+
+            <div style="font-size: 8px; margin: 0px 0px 0px 45px ;">{{ foo.create_time }}</div>
+
             {% if foo.comm is not None %}
                 {% for fo in foo.comm %}
 

@@ -1,5 +1,7 @@
 import json
+import time
 
+from django.conf import settings
 from django.contrib.auth import login, logout
 from users.models import User
 from django.http.response import HttpResponse, JsonResponse, HttpResponseRedirect
@@ -7,6 +9,7 @@ from django.shortcuts import render
 
 # Create your views here.
 from django.views.generic.base import View
+
 
 
 def userLogin(request):
@@ -55,3 +58,11 @@ def userLogout(request):
 
 def userinfo(request):
     return render(request, 'userinfo.html')
+
+
+
+def test1(request):
+    test = settings.TEST
+    print(request.GET.get('t'))
+    time.sleep(10)
+    return HttpResponse(test)
