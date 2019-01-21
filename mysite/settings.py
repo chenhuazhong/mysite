@@ -186,5 +186,5 @@ CKEDITOR_CONFIGS = {
 TEST=2
 
 CRONJOBS = [
-    ('*/1 * * * *', 'page.tasks.getBlogList')
+    ('1 1 */1 * *', 'page.tasks.getBlogList')
 ]

@@ -17,6 +17,8 @@ def user_img():
 class User(AbstractUser):
     mobile = models.CharField('电话', max_length=11)
     ater_img = models.ImageField('头像', blank=True, null=True, upload_to=user_img)
+    csdn_username = models.CharField(max_length=30, verbose_name='csdn账户', help_text='用于模拟登陆csdn', blank=True, null=True)
+    csdn_passworld = models.CharField(max_length=30, verbose_name='csdn密码', help_text='用于模拟登陆csdn', blank=True, null=True)
 
     class Meta:
         db_table='tb_user'

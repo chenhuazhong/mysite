@@ -37,7 +37,7 @@ def getBlogList():
 
             print('detil--->',page_detil_html_code)
             print("-----l-----")
-            print(blog_tag_obj[0].text.strip())
+            print(blog_tag_obj.text.strip())
             # print('----content-----')
             # print(blog_content_obj)
 
@@ -68,7 +68,7 @@ def getBlogList():
             else:
                 pagetr = Pager.objects.create(**{
                     'p_title': blog_title_obj,
-                    'p_content': blog_content_obj,
+                    'p_content': page_detil_html_code,
                     'p_title_md5': title_md5,
                     'p_content_md5': content_md5,
                     'p_other_id': blog_data_id,
@@ -135,6 +135,10 @@ def GetJinShuPage():
 
             # print(html_obj.xpath("//ul[@class='note-list']/li").text)
 
+def main():
+    GetJinShuPage()
+    getBlogList()
+
 
 if __name__ == '__main__':
-    GetJinShuPage()
+    main()

@@ -36,7 +36,7 @@ class Pager(BaseModel):
         (1, 'csdn'),
         (2, '简书')
     )
-    p_user = models.ForeignKey('users.User', on_delete=models.CASCADE, verbose_name='文章发布者', default=User.objects.get(username='root').id)
+    p_user = models.ForeignKey('users.User', on_delete=models.CASCADE, verbose_name='文章发布者', default=1)
     p_like = models.IntegerField('点赞数', default=0)
     p_comment = models.IntegerField('评论数', default=0)
     p_content = RichTextUploadingField('文章内容')
