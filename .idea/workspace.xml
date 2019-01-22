@@ -2,66 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="72609dc6-6e56-4d02-9b22-23c4ff2935be" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utils/csdn_selenium.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/chromedriver" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/chromedriver_linux64.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phantomjs-2.1.1-linux-x86_64.tar.bz2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phantomjs-2.1.1-linux-x86_64/ChangeLog" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phantomjs-2.1.1-linux-x86_64/LICENSE.BSD" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phantomjs-2.1.1-linux-x86_64/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phantomjs-2.1.1-linux-x86_64/bin/phantomjs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phantomjs-2.1.1-linux-x86_64/examples/arguments.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phantomjs-2.1.1-linux-x86_64/examples/child_process-examples.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phantomjs-2.1.1-linux-x86_64/examples/colorwheel.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phantomjs-2.1.1-linux-x86_64/examples/countdown.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phantomjs-2.1.1-linux-x86_64/examples/detectsniff.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phantomjs-2.1.1-linux-x86_64/examples/echoToFile.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phantomjs-2.1.1-linux-x86_64/examples/features.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phantomjs-2.1.1-linux-x86_64/examples/fibo.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phantomjs-2.1.1-linux-x86_64/examples/hello.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phantomjs-2.1.1-linux-x86_64/examples/injectme.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phantomjs-2.1.1-linux-x86_64/examples/loadspeed.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phantomjs-2.1.1-linux-x86_64/examples/loadurlwithoutcss.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phantomjs-2.1.1-linux-x86_64/examples/modernizr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phantomjs-2.1.1-linux-x86_64/examples/module.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phantomjs-2.1.1-linux-x86_64/examples/netlog.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phantomjs-2.1.1-linux-x86_64/examples/netsniff.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phantomjs-2.1.1-linux-x86_64/examples/openurlwithproxy.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phantomjs-2.1.1-linux-x86_64/examples/outputEncoding.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phantomjs-2.1.1-linux-x86_64/examples/page_events.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phantomjs-2.1.1-linux-x86_64/examples/pagecallback.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phantomjs-2.1.1-linux-x86_64/examples/phantomwebintro.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phantomjs-2.1.1-linux-x86_64/examples/post.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phantomjs-2.1.1-linux-x86_64/examples/postjson.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phantomjs-2.1.1-linux-x86_64/examples/postserver.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phantomjs-2.1.1-linux-x86_64/examples/printenv.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phantomjs-2.1.1-linux-x86_64/examples/printheaderfooter.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phantomjs-2.1.1-linux-x86_64/examples/printmargins.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phantomjs-2.1.1-linux-x86_64/examples/rasterize.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phantomjs-2.1.1-linux-x86_64/examples/render_multi_url.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phantomjs-2.1.1-linux-x86_64/examples/responsive-screenshot.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phantomjs-2.1.1-linux-x86_64/examples/run-jasmine.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phantomjs-2.1.1-linux-x86_64/examples/run-jasmine2.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phantomjs-2.1.1-linux-x86_64/examples/run-qunit.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phantomjs-2.1.1-linux-x86_64/examples/scandir.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phantomjs-2.1.1-linux-x86_64/examples/server.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phantomjs-2.1.1-linux-x86_64/examples/serverkeepalive.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phantomjs-2.1.1-linux-x86_64/examples/simpleserver.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phantomjs-2.1.1-linux-x86_64/examples/sleepsort.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phantomjs-2.1.1-linux-x86_64/examples/stdin-stdout-stderr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phantomjs-2.1.1-linux-x86_64/examples/universe.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phantomjs-2.1.1-linux-x86_64/examples/unrandomize.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phantomjs-2.1.1-linux-x86_64/examples/useragent.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phantomjs-2.1.1-linux-x86_64/examples/version.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phantomjs-2.1.1-linux-x86_64/examples/waitfor.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phantomjs-2.1.1-linux-x86_64/examples/walk_through_frames.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phantomjs-2.1.1-linux-x86_64/third-party.txt" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/domain/models.py" afterPath="$PROJECT_DIR$/domain/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/settings.py" afterPath="$PROJECT_DIR$/mysite/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/tasks.py" afterPath="$PROJECT_DIR$/page/tasks.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/users/models.py" afterPath="$PROJECT_DIR$/users/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/csdn_selenium.py" afterPath="$PROJECT_DIR$/utils/csdn_selenium.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -72,7 +14,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/mysite$tests.coverage" NAME="tests Coverage Results" MODIFIED="1547908333184" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/domain" />
-    <SUITE FILE_PATH="coverage/mysite$csdn_selenium.coverage" NAME="csdn_selenium Coverage Results" MODIFIED="1548080250844" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
+    <SUITE FILE_PATH="coverage/mysite$csdn_selenium.coverage" NAME="csdn_selenium Coverage Results" MODIFIED="1548170938240" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
     <SUITE FILE_PATH="coverage/mysite$tasks.coverage" NAME="tasks Coverage Results" MODIFIED="1547922002516" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/page" />
     <SUITE FILE_PATH="coverage/mysite$tests__1_.coverage" NAME="tests (1) Coverage Results" MODIFIED="1547478002969" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/users" />
   </component>
@@ -106,8 +48,8 @@
       <file leaf-file-name="tasks.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/page/tasks.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="137" column="11" lean-forward="false" selection-start-line="137" selection-start-column="11" selection-end-line="137" selection-end-column="11" />
+            <state relative-caret-position="214">
+              <caret line="132" column="0" lean-forward="true" selection-start-line="132" selection-start-column="0" selection-end-line="132" selection-end-column="0" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -118,8 +60,8 @@
       <file leaf-file-name="csdn_selenium.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/utils/csdn_selenium.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="6" column="29" lean-forward="true" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
+            <state relative-caret-position="153">
+              <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
               </folding>
@@ -150,8 +92,8 @@
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="518">
-              <caret line="108" column="9" lean-forward="false" selection-start-line="108" selection-start-column="9" selection-end-line="108" selection-end-column="9" />
+            <state relative-caret-position="-10">
+              <caret line="61" column="0" lean-forward="true" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -160,7 +102,7 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mysite/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2473">
+            <state relative-caret-position="2924">
               <caret line="172" column="24" lean-forward="false" selection-start-line="172" selection-start-column="24" selection-end-line="172" selection-end-column="24" />
               <folding />
             </state>
@@ -247,8 +189,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="65" />
     <option name="y" value="24" />
-    <option name="width" value="1301" />
-    <option name="height" value="744" />
+    <option name="width" value="1297" />
+    <option name="height" value="602" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -265,8 +207,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -768,18 +710,18 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="24" width="1301" height="744" extended-state="6" />
+    <frame x="65" y="24" width="1297" height="602" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18903892" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19203188" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32923076" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37288135" sideWeight="0.50436854" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19062749" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32973805" sideWeight="0.49722" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26824456" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.47919875" sideWeight="0.49563146" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.44575936" sideWeight="0.49563146" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24135281" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39291218" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21109399" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.62327415" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -878,7 +820,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
@@ -891,7 +832,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
@@ -904,7 +844,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
@@ -917,7 +856,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
@@ -930,7 +868,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
@@ -943,7 +880,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
@@ -956,7 +892,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
@@ -969,7 +904,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
@@ -982,7 +916,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
@@ -995,7 +928,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
@@ -1008,7 +940,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
@@ -1021,7 +952,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
@@ -1034,7 +964,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
@@ -1047,7 +976,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
@@ -1060,7 +988,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
@@ -1073,7 +1000,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
@@ -1086,7 +1012,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
@@ -1099,7 +1024,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
@@ -1133,7 +1057,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
@@ -1186,7 +1109,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
@@ -1199,7 +1121,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1207,7 +1128,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="867">
           <caret line="60" column="46" lean-forward="false" selection-start-line="60" selection-start-column="46" selection-end-line="60" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1215,7 +1135,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2380">
           <caret line="140" column="0" lean-forward="false" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1223,7 +1142,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="223">
           <caret line="1549" column="30" lean-forward="false" selection-start-line="1549" selection-start-column="19" selection-end-line="1549" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1231,13 +1149,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mysite/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2473">
+        <state relative-caret-position="2924">
           <caret line="172" column="24" lean-forward="false" selection-start-line="172" selection-start-column="24" selection-end-line="172" selection-end-column="24" />
           <folding />
         </state>
@@ -1255,7 +1172,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1283,19 +1199,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="518">
-          <caret line="108" column="9" lean-forward="false" selection-start-line="108" selection-start-column="9" selection-end-line="108" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/61835c8d/c4a765ae-058c-4e52-969a-30b98065a445/tb_user">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
@@ -1312,10 +1219,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-10">
+          <caret line="61" column="0" lean-forward="true" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/page/tasks.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="137" column="11" lean-forward="false" selection-start-line="137" selection-start-column="11" selection-end-line="137" selection-end-column="11" />
+        <state relative-caret-position="214">
+          <caret line="132" column="0" lean-forward="true" selection-start-line="132" selection-start-column="0" selection-end-line="132" selection-end-column="0" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
@@ -1324,8 +1239,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/utils/csdn_selenium.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="6" column="29" lean-forward="true" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
+        <state relative-caret-position="153">
+          <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
           <folding>
             <element signature="e#0#30#0" expanded="true" />
           </folding>
