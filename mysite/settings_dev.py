@@ -45,7 +45,8 @@ INSTALLED_APPS = [
     'crispy_forms',
     'music',
     'page',
-    "django_crontab"
+    "django_crontab",
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
@@ -190,3 +191,11 @@ TEST=1
 CRONJOBS = [
     ('*/1 * * * *', 'page.tasks.getBlogList')
 ]
+
+
+REST_FRAMEWORK  = {
+    ' DEFAULT_AUTHENTICATION_CLASSES ' : (
+        ' rest_framework_simplejwt.authentication.JWTAuthentication '
+    )
+}
+

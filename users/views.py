@@ -3,6 +3,11 @@ import time
 
 from django.conf import settings
 from django.contrib.auth import login, logout
+from rest_framework.decorators import action
+from rest_framework.response import Response
+from rest_framework.views import APIView
+from rest_framework.viewsets import ViewSet
+
 from users.models import User
 from django.http.response import HttpResponse, JsonResponse, HttpResponseRedirect
 from django.shortcuts import render
@@ -66,3 +71,5 @@ def test1(request):
     print(request.GET.get('t'))
     time.sleep(10)
     return HttpResponse(test)
+
+

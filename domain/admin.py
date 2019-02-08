@@ -16,7 +16,7 @@ class PagerAdmin(admin.ModelAdmin):
         if int(form.data['p_type']) == 1:
             if not change:
                 print(11)
-                # publish_csdn_page(form.data['p_title'], form.data['p_content'])
+                publish_csdn_page(form.data['p_title'], form.data['p_content'])
                 md = hashlib.md5(form.data['p_title'].encode('utf-8'))
                 title_md5 = md.hexdigest()
                 md2 = hashlib.md5(form.data['p_content'].encode('utf-8'))

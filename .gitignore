@@ -107,3 +107,4 @@ venv.bak/
 media/
 
 db.sqlite3
+.idea/

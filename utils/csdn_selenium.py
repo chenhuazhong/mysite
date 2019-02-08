@@ -1,6 +1,7 @@
 from selenium import webdriver
 import time
 
+from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.select import Select
 
 
@@ -36,9 +37,19 @@ def publish_csdn_page(title, content):
     # import django
     # django.setup()
     from users.models import User
-
+    from pyvirtualdisplay import Display
     url = "https://passport.csdn.net/login"
-    driver = webdriver.Chrome('/usr/local/bin/chromedriver')
+    # 开始没有显示界面的chrome 浏览器
+    chrome_options = Options()
+    chrome_options.add_argument('--headless')
+
+    # 低于59版本的chrome浏览器  需要开启一个虚拟界面 来跑chrome 无界面模式
+    # 高于59 版本的chrome浏览器 不需要开启虚拟界面来跑 chrome浏览器的无头模式
+    display = Display(visible=False, size=(1024, 768))  # 需要安装 sudo apt-get install xvfb
+    display.start()
+    # chrome浏览器的驱动根据 本地装的chrome浏览器的版本下载 相关驱动
+    # 将驱动复制到 /usr/local/bin/chromedriver
+    driver = webdriver.Chrome('/usr/local/bin/chromedriver', chrome_options=chrome_options)
     driver.get(url)
     driver.find_element_by_xpath('//div[@class="main-select"]//li[1]/a').click()
     # 输入账号
