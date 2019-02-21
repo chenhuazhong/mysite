@@ -25,6 +25,17 @@ def check_img_url(obj, file_obj):
     return os.path.join('{}{}'.format(datetime.datetime.now().strftime("%Y/%m/%d/"),new_file_name))
 
 
+class DomanModel(BaseModel):
+    title = models.CharField(max_length=128, verbose_name='标题')
+    url = models.URLField(max_length=128, verbose_name='url')
+    image = models.ImageField(upload_to=check_img_url,verbose_name='图片')
+
+    class Meta:
+        db_table='tb_doman_ima'
+        verbose_name_plural = '轮播图'
+        verbose_name = verbose_name_plural
+
+
 class Pager(BaseModel):
 
     CHOICES_TOP = (
@@ -49,6 +60,7 @@ class Pager(BaseModel):
     p_tag = models.CharField('原创 or other', max_length=10, blank=True, null=True)
     p_title_md5 = models.CharField('文章标题的uuid', max_length=32, blank=True, null=True)
     p_content_md5 = models.CharField('文章', max_length=32, blank=True, null=True)
+    p_other_link = models.URLField(max_length=512, verbose_name="文章链接", null=True, blank=True)
 
     class Meta:
         db_table='tb_pager'

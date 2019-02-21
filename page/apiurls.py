@@ -4,7 +4,8 @@ from rest_framework.routers import DefaultRouter
 from page import apiviews
 
 route = DefaultRouter()
-route.register('', apiviews.PageAPIView)
+route.register('', apiviews.PageListAPIView)
+# route.register('', apiviews.PageAPIView)
 
 
 urlpatterns = [
