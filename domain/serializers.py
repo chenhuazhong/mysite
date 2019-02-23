@@ -7,4 +7,4 @@ class DomanSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = DomanModel
-        fields = ('url', 'image', 'title')
+        fields = ('url', 'image', 'title', 'type', 'id')

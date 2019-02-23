@@ -7,6 +7,8 @@ from utils.csdn_selenium import publish_csdn_page
 from . import models
 
 
+
+
 class PagerAdmin(admin.ModelAdmin):
     def save_model(self, request, obj, form, change):
         print('mark--page')

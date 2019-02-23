@@ -9,3 +9,4 @@ def music(request):
 
 def lrc(request):
     return render(request, 'lrc.html')
+

@@ -1,11 +1,14 @@
+from rest_framework import status
 from rest_framework.reverse import reverse
 from rest_framework.status import HTTP_400_BAD_REQUEST
+from rest_framework_simplejwt.exceptions import TokenError, InvalidToken
 
 from users.models import User
 from rest_framework.decorators import action
 from rest_framework.response import Response
 from rest_framework.viewsets import ViewSet
 
+from rest_framework_simplejwt.views import TokenObtainPairView
 
 class UserAPIView(ViewSet):
 
@@ -40,4 +43,16 @@ class UserAPIView(ViewSet):
             return Response('注册成功')
 
 
+class MyTokenObtainPairView(TokenObtainPairView):
+
+    def post(self, request, *args, **kwargs):
+        serializer = self.get_serializer(data=request.data)
+
+        try:
+            serializer.is_valid(raise_exception=True)
+        except TokenError as e:
+            raise InvalidToken(e.args[0])
+        serializer.validated_data['username'] = serializer.user.username
+        serializer.validated_data['user_id'] = serializer.user.id
+        return Response(serializer.validated_data, status=status.HTTP_200_OK)
 

@@ -29,6 +29,7 @@ class DomanModel(BaseModel):
     title = models.CharField(max_length=128, verbose_name='标题')
     url = models.URLField(max_length=128, verbose_name='url')
     image = models.ImageField(upload_to=check_img_url,verbose_name='图片')
+    type = models.CharField(max_length=20 ,default='page', choices=(('page', '文章'), ('project', '其他')), verbose_name='轮播图类型')
 
     class Meta:
         db_table='tb_doman_ima'

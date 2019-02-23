@@ -31,7 +31,8 @@ urlpatterns = [
     path('ckeditor/', include('ckeditor_uploader.urls')),
     path('API/user/', include('users.apiurls')),
     path('API/page/', include('page.apiurls')),
-    path('API/doman/', include('domain.apiurls'))
+    path('API/doman/', include('domain.apiurls')),
+    path('API/music/', include('music.apiurls'))
     # path('/static/.*', serve, {"document_root": settings.MEDIA_ROOT}),
     # path('static/media/(<str:path>.*)', page)
 

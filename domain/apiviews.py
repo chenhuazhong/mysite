@@ -10,5 +10,4 @@ class DomanAPIView(APIView):
     def get(self, request):
         query_set = DomanModel.objects.all()[:4]
         serializer = DomanSerializer(query_set, many=True)
-        print(serializer.data)
         return Response(serializer.data)
