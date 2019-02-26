@@ -144,7 +144,7 @@
 
         methods: {
             login: function () {
-                axios.post('{{ HOST }}user/login/', {
+                axios.post('{{ HOST }}V1/user/login/', {
                     mobile: this.mobile,
                     password: this.password
                 }, {
@@ -177,7 +177,7 @@
                     })
             },
             logout:function(){
-                axios.post('{{ HOST }}user/logout/', {
+                axios.post('{{ HOST }}V1/user/logout/', {
 
 
                 }, {
@@ -212,7 +212,7 @@
 
             },
             registe:function () {
-                axios.post('/user/registe/',{
+                axios.post('/v1/user/registe/',{
                     'mobile':mv.mobile,
                     'password':mv.password
                 }).then(function (response) {

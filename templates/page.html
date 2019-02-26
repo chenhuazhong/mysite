@@ -141,7 +141,7 @@
             submit:function () {
                 if (vm.comment != '') {
                     axios.defaults.withCredentials = true
-                    axios.post('{{ HOST }}page/' + vm.pk + '/comment/', {
+                    axios.post('{{ HOST }}V1/page/' + vm.pk + '/comment/', {
                             'comment': vm.comment
                         },
                         {
@@ -159,7 +159,7 @@
 
             },
             login: function () {
-                axios.post('{{ HOST }}user/login/', {
+                axios.post('{{ HOST }}V1/user/login/', {
                     mobile: this.mobile,
                     password: this.password
                 }, {
@@ -192,7 +192,7 @@
                     })
             },
             logout:function(){
-                axios.post('{{ HOST }}user/logout/', {
+                axios.post('{{ HOST }}V1/user/logout/', {
 
 
                 }, {
@@ -223,7 +223,7 @@
                     })
             },
             registe:function () {
-                axios.post('/user/registe/',{
+                axios.post('/V1/user/registe/',{
                     'mobile':vm.mobile,
                     'password':vm.password
                 }).then(function (response) {

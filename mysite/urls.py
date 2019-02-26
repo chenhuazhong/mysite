@@ -23,12 +23,12 @@ from mysite import settings
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('user/', include('users.urls')),
-    path('', include('domain.urls')),
-    path('music/', include('music.urls')),
-    path('page/', include('page.urls')),
-    path('ckeditor/', include('ckeditor_uploader.urls')),
+    path('V1/admin/', admin.site.urls),
+    path('V1/user/', include('users.urls')),
+    path('V1/', include('domain.urls')),
+    path('V1/music/', include('music.urls')),
+    path('V1/page/', include('page.urls')),
+    path('V1/ckeditor/', include('ckeditor_uploader.urls')),
     path('API/user/', include('users.apiurls')),
     path('API/page/', include('page.apiurls')),
     path('API/doman/', include('domain.apiurls')),

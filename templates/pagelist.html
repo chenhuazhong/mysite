@@ -122,7 +122,7 @@
 
         methods: {
             login: function () {
-                axios.post('/user/login/', {
+                axios.post('/V1/user/login/', {
                     mobile: this.mobile,
                     password: this.password
                 }, {
@@ -155,7 +155,7 @@
                     })
             },
             logout:function(){
-                axios.post('/user/logout/', {
+                axios.post('/V1/user/logout/', {
 
 
                 }, {
@@ -186,7 +186,7 @@
                     })
             },
             registe:function () {
-                axios.post('/user/registe/',{
+                axios.post('/V1/user/registe/',{
                     'mobile':vm.mobile,
                     'password':vm.password
                 }).then(function (response) {
